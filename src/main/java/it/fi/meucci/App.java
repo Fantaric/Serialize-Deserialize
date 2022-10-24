@@ -1,6 +1,5 @@
 package it.fi.meucci;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -25,12 +24,18 @@ public class App {
         alunni.add(a4);
 
         Classe c1 = new Classe(5, "CIA", "04-TC", alunni);
+        
 
         try {
+
             ObjectMapper objectMapper = new ObjectMapper();
-            objectMapper.writeValue(new File("serialize.json"), c1);
-        } catch (Exception e) {
-        }
+            String jsonStr = objectMapper.writeValueAsString(c1);
+            System.out.println(jsonStr);
+
+            Classe c = objectMapper.readValue(jsonStr, Classe.class);
+            System.out.println(c.getAula());
+
+        } catch (Exception e) {}
 
     }
 }
