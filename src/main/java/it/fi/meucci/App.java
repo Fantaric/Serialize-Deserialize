@@ -4,14 +4,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-
-public class App 
-{
-    public static void main( String[] args )
-    {
-        
+public class App {
+    public static void main(String[] args) {
 
         Date myDate1 = new Date(2004, 7, 29);
         Alunno a1 = new Alunno("Riccardo", "Fantacci", myDate1);
@@ -30,12 +26,11 @@ public class App
 
         Classe c1 = new Classe(5, "CIA", "04-TC", alunni);
 
-        try{
-            XmlMapper xmlMapper = new XmlMapper();
-            xmlMapper.writeValue(new File("serialize.xml"),c1);
-        }catch(Exception e){}
-        
-        
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writeValue(new File("serialize.json"), c1);
+        } catch (Exception e) {
         }
-    }
 
+    }
+}

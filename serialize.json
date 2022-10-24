@@ -1,0 +1,27 @@
+{
+    "numero": 5,
+    "sezione": "CIA",
+    "aula": "04-TC",
+    "alunni": [
+        {
+            "nome": "Riccardo",
+            "cognome": "Fantacci",
+            "dataDiNascita": 61051874400000
+        },
+        {
+            "nome": "Flavio",
+            "cognome": "Ndoja",
+            "dataDiNascita": 61065270000000
+        },
+        {
+            "nome": "Niccolò",
+            "cognome": "Sartorio",
+            "dataDiNascita": 61054725600000
+        },
+        {
+            "nome": "Guido",
+            "cognome": "Lanzi",
+            "dataDiNascita": 61041333600000
+        }
+    ]
+}
